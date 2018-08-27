@@ -1,0 +1,36 @@
+.navigateWrap {
+    width: 200px;
+    margin: 10px;
+    position: fixed;
+}
+
+.navigate {
+    padding: 10px;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.backToHome {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.backToHome:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.navigateWrap .navigate h1 {
+    padding: 10px;
+}
+
+.navigateWrap .navigate h1:hover {
+    background-color: yellow;
+    color: black;
+}

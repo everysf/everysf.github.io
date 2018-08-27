@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "Avenir";
+    src: url(type/Avenir.ttc);
+    font-weight: normal;
+}
+
+body {
+    font-family: "Avenir";
+    overflow: hidden;
+    cursor: crosshair;
+    height: 100vh;
+    width: 100%;
+}
+
+::selection {
+    background: yellow;
+  }
+
+h1 {
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.landingWrap {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 1px solid black;
+    padding-left: 10px;
+    z-index: 10;
+    animation: 10s blur infinite;
+}
+
+.nav {
+    position: absolute;
+    padding: 20px;
+    z-index: 20;
+    animation: 10s blur infinite;
+    cursor: zoom-in;
+    z-index: 10;
+}
+
+.technical {
+    top: 0;
+    left: 0;
+}
+
+.creative {
+    right: 0;
+    top: 0
+}
+
+.resume {
+    right: 0;
+    bottom: 0;
+}
+
+.contact {
+    bottom: 0;
+    left: 0;
+}
+
+.flicker {
+    animation: .5s flicker infinite;
+}
+
+.nav2 {
+    filter: blur(5px);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 10px;
+    z-index: 10;
+    display: flex;
+}
+
+.menuItem {
+    margin: 20px;
+    border-bottom: 3px solid rgba(0,0,0,0);
+}
+
+.menuItem:hover {
+    border-bottom: 3px solid yellow;
+}
+
+.blurred {
+    filter: blur(5px)
+}
+
+.notBlurred {
+    filter: blur(0px)
+}
+
+.textContainer {
+    overflow: scroll;
+    max-width: 500px;
+    max-height: 480px;
+}
+
+.back {
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    padding: 20px;
+    z-index: 20;
+    animation: 10s blur infinite;
+    cursor: zoom-in;
+    z-index: 10;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.contactOverlay {
+    background: url(img/sky2\ 2.png);
+    height: 100vh;
+    width: 100%;
+    z-index: 15;
+    position: absolute;
+    top: 100%;
+    transition: 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactOverlayContent {
+    background-color: white;
+    padding: 35px;
+}
+
+.contactOverlay h1 {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.contactOverlay textarea {
+    width: 500px;
+    height: 150px;
+    padding: 15px;
+    resize: none;
+    margin: 15px 0;
+}
+
+.resumeOverlay {
+    background: url(img/sky1\ 2.png);
+    height: 100vh;
+    width: 100%;
+    z-index: 15;
+    position: absolute;
+    top: 100%;
+    transition: 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.resumeOverlayContent {
+    background-color: white;
+    padding: 35px;
+}
+
+.resumeOverlay h1 {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.resumeOverlay h2 {
+    font-size: 20px;
+}
+
+.popout {
+    padding: 20px;
+    background-color: #f6f6f6;
+    transition: 1s ease;
+}
+
+.popout2 {
+    padding-left: 20px;
+}
+
+.resumeOverlay p {
+    line-height: 26px;
+}
+
+.underline {
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+
+.resumeBlock {
+    margin-bottom: 15px;
+}
+
+.popout:hover {
+    background-color: yellow;
+}
+
+.technicalOverlay {
+    background: url(img/sky4\ 2.png);
+    height: 100vh;
+    width: 100%;
+    z-index: 15;
+    position: absolute;
+    bottom: 100%;
+    transition: 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techNav {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+}
+
+.thumbnail {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    background-color: lightblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.thumbnail h1 {
+    padding: 10px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    color: white;
+}
+
+#webThumb {
+    background-image: url(img/petpackage.jpg)
+}
+
+#apiThumb {
+    background-image: url(img/giftastico.jpg)
+}
+
+#experienceThumb {
+    background-image: url(img/albumpro.jpg)
+}
+
+#marketingThumb {
+    background-image: url(img/jamfrancisco1.jpg)
+}
+
+.creativeOverlay {
+    background: url(img/sky3\ 2.png);
+    height: 100vh;
+    width: 100%;
+    z-index: 15;
+    position: absolute;
+    bottom: 100%;
+    transition: 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#graphicsThumb {
+    background-image: url(img/jackwhite.jpg)
+}
+
+#blogThumb {
+    background-image: url(img/books.jpeg)
+}
+
+#musicThumb {
+    background-image: url(img/soundcloud.jpg)
+}
+
+.hoverYellow:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.textContainer p {
+    line-height: 25px;
+}
+
+.soundcloud {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -250px;
+    display: flex;
+    align-items: center;
+    z-index: 100
+}
+
+.soundcloudhide {
+    padding: 20px;
+    text-align: right;
+    transition: .2s ease;
+}
+
+#linked {
+    cursor: pointer;
+}
+
+.entryModal {
+    background-color: rgba(0,0,0,1);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+}
+
+.entryText {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}  
+
+.advance:hover {
+    text-decoration: underline;
+}
+
+.fullSize {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.linkedIn {
+    text-align: center;
+    transition: .5s ease;
+    width: 80px;
+    margin: 5px auto;
+    border-radius: 4px;
+}
+
+.linkedIn:hover {
+    background-color: #0077b5;
+    color: white;
+}
+
+.contactOverlay .linkedIn {
+    line-height: 26px;
+}
+
+.contactOverlay a {
+    width: 145px;
+    margin: 5px auto;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 4px;
+    transition: .5s ease;
+    padding: 0 5px;
+}
+
+.contactOverlay a:hover {
+    background-color: yellow;
+
+}
+
+.contactOverlayContent {
+    display: flex;
+    flex-direction: column;
+}
+
