@@ -49,6 +49,7 @@
     }
     100% {
         filter: blur(0px)
+        
     }
 }
 
@@ -74,5 +75,20 @@
         transform: scale(10);
         filter: blur(5px);
         opacity: 0;
+    }
+}
+
+@keyframes advanceFadeOut {
+    0% {
+
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    100% {
+        display: none;
     }
 }

@@ -2,39 +2,21 @@
 // Let's work together:
 // Kevin@everysf.com
 
-// Intialize Parallax.js
-// var scene = document.getElementById('scene');
-// var parallaxInstance = new Parallax(scene);
-
 var titlesArr = ["designer", "developer", "creative", "problem solver", "guitar player", "runner", "dad-joke teller"];
 
 var state;
 
-function hideHome() {
-    $(".nav").css("animation", "1s blurOut")
-    $(".landingWrap").css("animation", "1s blurOut")
-    $(".nav").addClass("blurred")
-    $(".landingWrap").addClass("blurred")
-}
-
-function showNav() {
-    $(".nav2").css("animation", "1s blurIn")
-    $(".resumeOverlay").css("top", "0")
-}
-
 function showHome() {
-    $(".nav").css("animation", "1s blurIn")
     $(".landingWrap").css("animation", "1s blurIn")
-    $(".nav").removeClass("blurred")
-    $(".landingWrap").removeClass("blurred")
-}
-
-function hideNav() {
-    $(".nav2").css("animation", "1s blurOut")
     $(".resumeOverlay").css("top", "100%")
     $(".contactOverlay").css("top", "100%")
-    $(".technicalOverlay").css("bottom", "100%")
     $(".creativeOverlay").css("bottom", "100%")
+    $(".technicalOverlay").css("bottom", "100%")
+}
+
+function showResume() {
+    $(".nav2").css("animation", "1s blurIn")
+    $(".resumeOverlay").css("top", "0")
 }
 
 function showContact() {
@@ -64,27 +46,27 @@ function cycleTitle() {
 }
 
 $(".resume").on("click", function(){
-    hideHome()
-    showNav()
+    showHome()
+    showResume()
 })
 
 $(".contact").on("click", function(){
-    hideHome()
+    showHome()
     showContact()
 })
 
 $(".technical").on("click", function(){
-    hideHome()
+    showHome()
     showTechnical()
 })
 
 $(".creative").on("click", function(){
-    hideHome()
+    showHome()
     showCreative()
 })
 
-$(".back").on("click", function(){
-    hideNav()
+$(".backdrop").on("click", function(){
+    console.log("hey")
     showHome()
 })
 
@@ -95,7 +77,7 @@ $(".linkedIn").on("click", function(){
 
 var schidden
 
-$("#musicThumb").on("click", function(){
+$("#music").on("click", function(){
     $(".soundcloud").css("right", "0")
     schidden = false
 })
@@ -114,8 +96,38 @@ $(".soundcloudhide").on("click", function(){
 
 $(".advance").on("click", function(){
     $(".landingWrap").show()
-    $(".entryModal").css("animation", ".5s advance forwards")
+    $(".entryText").css("animation", ".5s advance forwards")
+    $(".entryModal").css("animation", ".5s advanceFadeOut forwards")
     cycleTitle()
+})
+
+$("#petPackage").on("click", function(){
+    window.location.href =("https://everysf.github.io/pet-package/")
+})
+
+$("#gifTastico").on("click", function(){
+    window.location.href =("https://everysf.github.io/gif-engine/")
+})
+
+function comingSoon() {
+    var newDiv = $("<div>")
+    newDiv.addClass("comingSoon")
+    var soonModal = $("<div>")
+    soonModal.addClass("soonModal")
+    var newHeader = $("<h1>")
+    newHeader.text("coming soon")
+    newDiv.append(newHeader)
+    $(".comingSoonBox").append(soonModal)
+    $(".comingSoonBox").append(newDiv)
+    console.log(newDiv)
+}
+
+$(".comingSoonPrompt").on("click", function(){
+    comingSoon()
+})
+
+$(".comingSoonBox").on("click", function(){
+    $(".comingSoonBox").empty()
 })
 
 console.log("Welcome to my site :).")

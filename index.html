@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kevin Macaraeg</title>
+    <link rel="shortcut icon" href="img/k-01.png">
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
 </head>
 <body>
+    <div class="comingSoonBox"></div>
     <div class="entryModal">
         <div class="entryText">       
              <h1>Welcome to the portfolio of Kevin Macaraeg.</h1>
@@ -28,43 +28,32 @@
             Kevin Macaraeg is a<br><span id="title">designer</span> living in<br>San Francisco, California<span class="flicker">.</span></h1>
     </div>
 
-    <h1 class="nav technical" data-menu="technical">technical</h1>
-
-    <h1 class="nav creative" data-menu="creative">creative</h1>
-
-    <h1 class="nav resume" data-menu="resume">resume</h1>
-
-    <h1 class="nav contact" data-menu="contact">communicate</h1>
-
-    <div class="nav2">
-    </div>
-
     <div class="technicalOverlay fullSize">
         <div class="techNav">
-            <div class="thumbnail" id="webThumb"><h1 class="hoverYellow">web</h1></div>
-            <div class="thumbnail" id="apiThumb"><h1 class="hoverYellow">api</h1></div>
-            <div class="thumbnail" id="experienceThumb"><h1 class="hoverYellow">experience</h1></div>
-            <div class="thumbnail" id="marketingThumb"><h1 class="hoverYellow">marketing</h1></div>
+            <div class="thumbnail" id="petPackage"><h1 class="hoverYellow">pet package</h1></div>
+            <div class="thumbnail" id="gifTastico"><h1 class="hoverYellow">gif machine</h1></div>
+            <div class="thumbnail" id="albumPro"><h1 class="hoverYellow comingSoonPrompt">experience design</h1></div>
+            <div class="thumbnail" id="jamFrancisco"><h1 class="hoverYellow comingSoonPrompt">marketing</h1></div>
         </div>
-        <p class="back technical">return</p>
+        <div class="backdrop"></div>
     </div>
 
     <div class="creativeOverlay fullSize">
-            <div class="techNav">
-                <div class="thumbnail" id="graphicsThumb"><h1 class="hoverYellow">graphics</h1></div>
-                <div class="thumbnail" id="blogThumb"><h1 class="hoverYellow">blog</h1></div>
-                <div class="thumbnail" id="musicThumb"><h1 class="hoverYellow">music demos</h1></div>
-            </div>
-            <p class="back creative">return</p>
+        <div class="techNav">
+            <div class="thumbnail comingSoonPrompt" id="graphicDesign"><h1 class="hoverYellow">graphics</h1></div>
+            <div class="thumbnail comingSoonPrompt" id="blog"><h1 class="hoverYellow">blog</h1></div>
+            <div class="thumbnail" id="music"><h1 class="hoverYellow">music demos</h1></div>
         </div>
+        <div class="backdrop"></div>
+    </div>
     
     <div class="contactOverlay fullSize">
         <div class="contactOverlayContent">        
             <h1>Communicate</h1>
             <a href="mailto:kevin@everysf.com">kevin@everysf.com</a>
             <p class="linkedIn">LinkedIn</p>
-            <p class="back contact">return</p>
         </div>
+        <div class="backdrop"></div>
     </div>
 
     <div class="resumeOverlay fullSize">
@@ -74,7 +63,7 @@
                 <br>
                 <br>
                 <p>
-                Macaraeg is passionate about creating web products, developing voice technologies, and blending art with science. He has experience in several media industries and competencies in various web design technologies. He reads about one new book per week and ran his first marathon this past summer. He is driven and ambitious.
+                Macaraeg is passionate about creating web products, developing voice technologies, and blending art with science. He has experience in several media industries and competencies in various web design technologies. He reads about one new book every other week and ran his first marathon this past summer. He is driven and ambitious.
                 <br>
                 <br>
                 Also, on the weekends, he goes out and eats tacos with his friends.
@@ -143,13 +132,19 @@
             <br>
             <p class="linkedIn">LinkedIn</p>
         </div>
-            <p class="back resume">back</p>
-        </div>
+        <div class="backdrop"></div>
+    </div>
+
+    <div class="navWrap">
+        <h1 class="nav technical" data-menu="technical">technical</h1>
+        <h1 class="nav creative" data-menu="creative">creative</h1>
+        <h1 class="nav resume" data-menu="resume">resume</h1>
+        <h1 class="nav contact" data-menu="contact">communicate</h1>
+    </div>
 
     <div class="soundcloud">
         <p class="soundcloudhide">hide</p>
         <iframe width="200" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/522225579&color=%23455455&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-
     </div>
 
     <script src="script.js"></script>

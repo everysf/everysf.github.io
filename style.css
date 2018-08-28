@@ -44,7 +44,14 @@ a {
     z-index: 20;
     animation: 10s blur infinite;
     cursor: zoom-in;
-    z-index: 10;
+}
+
+.navWrap {
+    border: 60px solid white;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    z-index: 200;
 }
 
 .technical {
@@ -79,7 +86,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     padding-left: 10px;
-    z-index: 10;
+    z-index: 200;
     display: flex;
 }
 
@@ -111,10 +118,9 @@ a {
     cursor: pointer;
     position: absolute;
     padding: 20px;
-    z-index: 20;
     animation: 10s blur infinite;
     cursor: zoom-in;
-    z-index: 10;
+    z-index: 1;
 }
 
 .italic {
@@ -122,7 +128,6 @@ a {
 }
 
 .contactOverlay {
-    background: url(img/sky2\ 2.png);
     height: 100vh;
     width: 100%;
     z-index: 15;
@@ -134,9 +139,14 @@ a {
     align-items: center;
 }
 
+.contactOverlay .backdrop {
+    background: url(img/sky2\ 2.png);
+}
+
 .contactOverlayContent {
     background-color: white;
     padding: 35px;
+    z-index: 100;
 }
 
 .contactOverlay h1 {
@@ -153,7 +163,6 @@ a {
 }
 
 .resumeOverlay {
-    background: url(img/sky1\ 2.png);
     height: 100vh;
     width: 100%;
     z-index: 15;
@@ -166,9 +175,17 @@ a {
     overflow: hidden;
 }
 
+.resumeOverlay .backdrop {
+    background: url(img/sky1\ 2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .resumeOverlayContent {
     background-color: white;
     padding: 35px;
+    z-index: 100;
 }
 
 .resumeOverlay h1 {
@@ -208,7 +225,6 @@ a {
 }
 
 .technicalOverlay {
-    background: url(img/sky4\ 2.png);
     height: 100vh;
     width: 100%;
     z-index: 15;
@@ -224,16 +240,22 @@ a {
     display: flex;
     background-color: white;
     padding: 15px;
+    z-index: 100;
+}
+
+.technicalOverlay .backdrop {
+    background: url(img/sky4\ 2.png);
 }
 
 .thumbnail {
     height: 200px;
     width: 200px;
     margin: 10px;
-    background-color: lightblue;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: .5 ease;
+    cursor: pointer;
 }
 
 .thumbnail h1 {
@@ -244,24 +266,33 @@ a {
     color: white;
 }
 
-#webThumb {
+#petPackage {
     background-image: url(img/petpackage.jpg)
 }
 
-#apiThumb {
+#gifTastico {
     background-image: url(img/giftastico.jpg)
 }
 
-#experienceThumb {
+#albumPro {
     background-image: url(img/albumpro.jpg)
 }
 
-#marketingThumb {
+#jamFrancisco {
     background-image: url(img/jamfrancisco1.jpg)
 }
 
+.backdrop {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .creativeOverlay {
-    background: url(img/sky3\ 2.png);
     height: 100vh;
     width: 100%;
     z-index: 15;
@@ -273,15 +304,19 @@ a {
     align-items: center;
 }
 
-#graphicsThumb {
+.creativeOverlay .backdrop {
+    background: url(img/sky3\ 2.png);
+}
+
+#graphicDesign {
     background-image: url(img/jackwhite.jpg)
 }
 
-#blogThumb {
+#blog {
     background-image: url(img/books.jpeg)
 }
 
-#musicThumb {
+#music {
     background-image: url(img/soundcloud.jpg)
 }
 
@@ -323,6 +358,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: center;
+    animation: 1s hide forwards;
 }
 
 .entryText {
@@ -343,6 +379,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
 
 .linkedIn {
@@ -382,3 +419,29 @@ a {
     flex-direction: column;
 }
 
+.thumbnail:hover {
+    opacity: .8;
+}
+
+.thumbnail:hover h1 {
+    background-color: yellow;
+    color: black;
+}
+
+.comingSoon {
+    background-color: white;
+    padding: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+
+.soonModal {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    z-index: 199;
+}
