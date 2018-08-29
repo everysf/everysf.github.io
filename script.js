@@ -130,6 +130,10 @@ $(".comingSoonBox").on("click", function(){
     $(".comingSoonBox").empty()
 })
 
+$(".backToHome").on("click", function(){
+    window.location.href = ("https://everysf.github.io/")
+})
+
 console.log("Welcome to my site :).")
 console.log("Shoot me an email if you'd like to work together.")
 console.log("kevin@everysf.com")

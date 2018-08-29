@@ -4,6 +4,12 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: "Avenir Next";
+    src: url(type/Avenir\ Next.ttc);
+    font-weight: normal;
+}
+
 body {
     font-family: "Avenir";
     overflow: hidden;
@@ -44,6 +50,10 @@ a {
     z-index: 20;
     animation: 10s blur infinite;
     cursor: zoom-in;
+}
+
+nav:hover {
+    color: yellow
 }
 
 .navWrap {
@@ -350,7 +360,6 @@ a {
 }
 
 .entryModal {
-    background-color: rgba(0,0,0,1);
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -359,6 +368,13 @@ a {
     transform: translate(-50%, -50%);
     transform-origin: center;
     animation: 1s hide forwards;
+}
+
+.entryModal video {
+    z-index: 5;
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100%;
 }
 
 .entryText {
@@ -373,6 +389,10 @@ a {
 
 .advance:hover {
     text-decoration: underline;
+}
+
+.advance:hover .arrow{
+    color: yellow;
 }
 
 .fullSize {
