@@ -36,13 +36,14 @@ function showCreative() {
 
 function cycleTitle() {
     var i = 1;
-    var changeTitle = setInterval(
+    setInterval(
         function() {
             $("#title").text(titlesArr[i])
             i++
             if (i > titlesArr.length - 1) {
                 i = 0}
         }, 2000)
+    console.log("cycle")
 }
 
 $(".resume").on("click", function(){
@@ -66,7 +67,6 @@ $(".creative").on("click", function(){
 })
 
 $(".backdrop").on("click", function(){
-    console.log("hey")
     showHome()
 })
 
@@ -119,7 +119,6 @@ function comingSoon() {
     newDiv.append(newHeader)
     $(".comingSoonBox").append(soonModal)
     $(".comingSoonBox").append(newDiv)
-    console.log(newDiv)
 }
 
 $(".comingSoonPrompt").on("click", function(){
@@ -137,3 +136,37 @@ $(".backToHome").on("click", function(){
 console.log("Welcome to my site :).")
 console.log("Shoot me an email if you'd like to work together.")
 console.log("kevin@everysf.com")
+
+// Pictures array
+
+// var albumsArr = []
+
+// function pushAlbums(){
+
+//     for (var i = 1; i < 37; i++){
+
+//         var k = i
+
+//         if (k < 10) {
+//             k = "0"+i
+//         }
+        
+//         var albumURL = "img/albums/albums-" + k + ".png"
+
+//         console.log(albumURL)
+
+//         albumsArr.push(albumURL)
+
+//     }
+
+//     for (var j = 0; j < albumsArr.length; j++) {
+
+//         var newThumb = $("<div>")
+//         newThumb.addClass("jamFranciscoThumbnail")
+//         newThumb.css("background-image", albumsArr[i])
+//         $(".pictures").append(newThumb)
+
+//     }
+// }
+
+// pushAlbums()
