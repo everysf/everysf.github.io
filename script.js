@@ -2,16 +2,20 @@
 // Let's work together:
 // Kevin@everysf.com
 
-var titlesArr = ["designer", "developer", "creative", "problem solver", "guitar player", "runner", "dad-joke teller"];
+var titlesArr = ["designer", "developer", "creative", "problem solver", "guitar player", "runner"];
 
 var state;
 
+var width = $(window).width()
+
 function showHome() {
-    $(".landingWrap").css("animation", "1s blurIn")
-    $(".resumeOverlay").css("top", "100%")
-    $(".contactOverlay").css("top", "100%")
-    $(".creativeOverlay").css("bottom", "100%")
-    $(".technicalOverlay").css("bottom", "100%")
+    if (width > 970) {
+        $(".landingWrap").css("animation", "1s blurIn")
+        $(".resumeOverlay").css("top", "100%")
+        $(".contactOverlay").css("top", "100%")
+        $(".creativeOverlay").css("bottom", "100%")
+        $(".technicalOverlay").css("bottom", "100%")
+    }
 }
 
 function showResume() {
@@ -133,7 +137,11 @@ $(".backToHome").on("click", function(){
     window.location.href = ("https://everysf.github.io/")
 })
 
-console.log("Welcome to my site :).")
+$(".fullProjects").on("click", function(){
+    $(".fullProjects").css("display", "none")
+})
+
+console.log("Welcome to my site.")
 console.log("Shoot me an email if you'd like to work together.")
 console.log("kevin@everysf.com")
 

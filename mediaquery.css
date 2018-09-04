@@ -1,7 +1,66 @@
-@media (max-width:900px) {
-
+@media (max-width:970px) {
+    .entryModal {
+        display: none;
+    }
+    .landingWrap {
+        display: none;
+    }
+    .techincalOverlay {
+        display: none;
+    }
+    .creativeOverlay {
+        display: none;
+    }
+    .contactOverlay {
+        display: none;
+    }
+    .navWrap {
+        display: none;
+    }
+    .soundcloud {
+        display: none;
+    }
+    .resumeOverlay {
+        top: 0%
+    }
+    .resumeOverlayContent {
+        background-color: white;
+        padding: 35px;
+        z-index: 100;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+    .textContainer {
+        overflow: scroll;
+        max-width: 500px;
+    }
+    .fullProjects {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media (max-width:900px) {
-
+@media (max-width:756px) {
+    body {
+        overflow: auto
+    }
+    .resumeOverlayContent {
+        background-color: white;
+        padding: 35px;
+        z-index: 100;
+        height: 100vh;
+        width: 100%;
+    }
+    .resumeOverlay {
+        height: 100vh; 
+    }
+    .textContainer {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 35px 0 0 0;
+    }
+    .linkedIn {
+        margin: 15px auto;
+    }
 }
